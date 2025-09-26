@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeVerse Ultimate - Electric Anime Paradise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Electric Background Animation -->
+    <div class="electric-bg">
+        <div class="lightning-bolt lightning-1"></div>
+        <div class="lightning-bolt lightning-2"></div>
+        <div class="lightning-bolt lightning-3"></div>
+        <div class="electric-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="aurora-wave"></div>
+        <div class="cosmic-dust"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="electric-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <h1 class="electric-logo" data-translate="welcome">AnimeVerse Ultimate</h1>
+                <div class="logo-glow"></div>
+            </div>
+            
+            <div class="nav-controls">
+                <div class="search-section">
+                    <div class="electric-search-container">
+                        <input type="text" id="searchInput" class="electric-search" data-translate-placeholder="search" placeholder="Search characters...">
+                        <div class="search-lightning"></div>
+                        <button id="clearSearch" class="clear-btn hidden">⚡</button>
+                    </div>
+                </div>
+                
+                <div class="control-panel">
+                    <select id="languageSelect" class="electric-select">
+                        <option value="en">🇺🇸 English</option>
+                        <option value="hi">🇮🇳 हिंदी</option>
+                        <option value="ja">🇯🇵 日本語</option>
+                        <option value="ko">🇰🇷 한국어</option>
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="fr">🇫🇷 Français</option>
+                    </select>
+                    
+                    <button id="themeToggle" class="electric-btn theme-btn">
+                        <span class="btn-icon">🌓</span>
+                        <div class="btn-lightning"></div>
+                    </button>
+                    
+                    <button id="profileBtn" class="electric-btn profile-btn" data-translate="profile">
+                        <span class="btn-icon">👤</span>
+                        <span class="btn-text">Profile</span>
+                        <div class="btn-lightning"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Homepage -->
+        <section id="homepage" class="page homepage active-page">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title electric-text" data-translate="heroTitle">
+                        Welcome to the Electric Anime Universe
+                    </h2>
+                    <p class="hero-subtitle glow-text">
+                        Discover your favorite characters with stunning visuals and immersive music
+                    </p>
+                    <div class="hero-lightning-effects">
+                        <div class="hero-bolt"></div>
+                        <div class="hero-bolt"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Must & Top Characters Section -->
+            <section class="priority-section">
+                <h3 class="section-title electric-gradient" data-translate="mustTop">⚡ Must & Top Characters ⚡</h3>
+                <div class="priority-grid" id="priorityGrid">
+                    <!-- Priority characters will be loaded here -->
+                </div>
+            </section>
+            
+            <!-- All Characters Section -->
+            <section class="characters-section">
+                <h3 class="section-title electric-gradient" data-translate="allCharacters">🌟 Complete Character Universe 🌟</h3>
+                <div class="characters-scroll" id="charactersContainer">
+                    <!-- All characters will be loaded here -->
+                </div>
+            </section>
+        </section>
+
+        <!-- Character Detail Page -->
+        <section id="characterPage" class="page character-page">
+            <button class="electric-back-btn" id="backBtn">
+                <span>⚡ Back</span>
+                <div class="btn-glow"></div>
+            </button>
+            
+            <div class="character-hero-section">
+                <div class="character-visual">
+                    <div class="character-image-container">
+                        <img id="characterHeroImage" class="character-hero-img" src="" alt="">
+                        <div class="image-electric-border"></div>
+                        <div class="image-glow-effect"></div>
+                    </div>
+                    <div class="character-emojis">
+                        <span class="floating-emoji">✨</span>
+                        <span class="floating-emoji">🎵</span>
+                        <span class="floating-emoji">⚡</span>
+                        <span class="floating-emoji">🌟</span>
+                        <span class="floating-emoji">💫</span>
+                    </div>
+                </div>
+                
+                <div class="character-details">
+                    <h2 id="characterName" class="character-title electric-gradient"></h2>
+                    <p id="characterAnime" class="character-anime glow-text"></p>
+                    <p id="characterDescription" class="character-description"></p>
+                    
+                    <div class="music-player-section">
+                        <div class="music-player">
+                            <div class="now-playing">
+                                <span class="music-icon">🎵</span>
+                                <span id="songTitle" class="song-title">Now Playing</span>
+                                <div class="music-visualizer">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </div>
+                            </div>
+                            <div class="music-controls">
+                                <button class="music-btn" id="playPauseBtn">▶️</button>
+                                <button class="music-btn" id="volumeBtn">🔊</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-content">
+                <div class="quotes-section">
+                    <h3 class="content-title" data-translate="quotes">⚡ Electric Quotes ⚡</h3>
+                    <div id="quotesContainer" class="quotes-container">
+                        <!-- Character quotes will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="gallery-section">
+                    <h3 class="content-title" data-translate="gallery">🌟 Visual Gallery 🌟</h3>
+                    <div id="galleryContainer" class="gallery-grid">
+                        <!-- Character gallery will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Page -->
+        <section id="profilePage" class="page profile-page">
+            <button class="electric-back-btn" id="profileBackBtn">
+                <span>⚡ Back to Universe</span>
+                <div class="btn-glow"></div>
+            </button>
+            
+            <div class="profile-hero">
+                <div class="profile-background-effects">
+                    <div class="cyber-grid"></div>
+                    <div class="quantum-particles">
+                        <span class="quantum-particle">💻</span>
+                        <span class="quantum-particle">⚡</span>
+                        <span class="quantum-particle">🔒</span>
+                        <span class="quantum-particle">🎶</span>
+                        <span class="quantum-particle">✨</span>
+                        <span class="quantum-particle">🌟</span>
+                        <span class="quantum-particle">💫</span>
+                        <span class="quantum-particle">🔮</span>
+                    </div>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="profile-avatar-section">
+                        <div class="profile-avatar">
+                            <div class="avatar-circle">KG</div>
+                            <div class="avatar-glow"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-info">
+                        <h2 class="profile-name electric-gradient">Karunesh Gupta</h2>
+                        <p class="profile-role glow-text">Cybersecurity & Quantum Computing Enthusiast</p>
+                        
+                        <div class="profile-details">
+                            <div class="detail-row">
+                                <span class="detail-label">📧</span>
+                                <span class="detail-value">karuneshgupta67@gmail.com</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">📱</span>
+                                <span class="detail-value">+91-7607545587</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">📍</span>
+                                <span class="detail-value">Koyala Nagar, Kanpur</span>
+                            </div>
+                            <div class="detail-row bio-row">
+                                <span class="detail-label">💡</span>
+                                <span class="detail-value">Exploring anime, music, and immersive web experiences</span>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <h4 class="social-title electric-text">Connect with Me</h4>
+                            <div class="links-grid">
+                                <a href="https://www.credly.com/users/karunesh-gupta" target="_blank" class="social-link credly">
+                                    <span class="link-icon">🏆</span>
+                                    <span class="link-text">Credly</span>
+                                    <div class="link-lightning"></div>
+                                </a>
+                                <a href="https://www.linkedin.com/in/karunesh-gupta-507b242a9" target="_blank" class="social-link linkedin">
+                                    <span class="link-icon">💼</span>
+                                    <span class="link-text">LinkedIn</span>
+                                    <div class="link-lightning"></div>
+                                </a>
+                                <a href="https://learn.microsoft.com/en-us/users/karuneshgupta3838/" target="_blank" class="social-link microsoft">
+                                    <span class="link-icon">🎓</span>
+                                    <span class="link-text">Microsoft Learn</span>
+                                    <div class="link-lightning"></div>
+                                </a>
+                                <a href="https://www.hackerrank.com/profile/karuneshgupta786" target="_blank" class="social-link hackerrank">
+                                    <span class="link-icon">💻</span>
+                                    <span class="link-text">HackerRank</span>
+                                    <div class="link-lightning"></div>
+                                </a>
+                                <a href="https://sunilkirana.my.canva.site/karunesh-gupta" target="_blank" class="social-link portfolio">
+                                    <span class="link-icon">🌐</span>
+                                    <span class="link-text">Portfolio</span>
+                                    <div class="link-lightning"></div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="music-control-section">
+                            <button id="profileMusicToggle" class="profile-music-btn">
+                                <span class="music-icon">🎵</span>
+                                <span class="music-text">Tower of God - Slump</span>
+                                <div class="music-btn-glow"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal hidden">
+        <div class="modal-backdrop">
+            <div class="modal-content-wrapper">
+                <button class="modal-close" id="closeImageModal">⚡</button>
+                <img id="modalImage" class="modal-image" src="" alt="">
+                <div class="modal-lightning"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo electric-gradient">AnimeVerse Ultimate</div>
+            <div class="loading-text">Powering up the electric experience...</div>
+            <div class="loading-animation">
+                <div class="loading-bolt"></div>
+                <div class="loading-bolt"></div>
+                <div class="loading-bolt"></div>
+            </div>
+        </div>
+    </div>
+     <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="documentation.html" target="_blank" rel="noopener noreferrer" class="neon-button">Documentation</a>
+     </div>
+    <script src="app.js"></script>
+</body>
+</html>
